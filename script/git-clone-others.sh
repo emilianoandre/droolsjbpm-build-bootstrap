@@ -21,8 +21,6 @@ initializeWorkingDirAndScriptDir() {
 }
 initializeWorkingDirAndScriptDir
 droolsjbpmOrganizationDir="$scriptDir/../.."
-withoutJbpm="$withoutJbpm"
-withoutUberfire="$withoutUberfire"
 
 startDateTime=`date +%s`
 
@@ -35,34 +33,28 @@ gitUrlPrefix=`echo ${gitUrlPrefix} | sed 's/^origin\s*//g' | sed 's/droolsjbpm\-
 
 cd "$droolsjbpmOrganizationDir"
 
+# additinal Git options can be passed simply as params to the script
+# example: --depth 1 (creates a shallow clone with that depth)
+additionalGitOptions="$@"
+
 for repository in `cat "${scriptDir}/repository-list.txt"` ; do
     echo
     if [ -d $repository ] ; then
         echo "==============================================================================="
         echo "This directory already exists: $repository"
         echo "==============================================================================="
-    elif [ "${repository}" != "${repository#jbpm}" ] && [ "$withoutJbpm" = 'true' ]; then
-        echo "==============================================================================="
-        echo "Without repository: $repository. SKIPPING!"
-        echo "==============================================================================="
-    elif [ "${repository}" != "${repository#jbpm-console-ng}" ] && [ "$withoutJbpm" = 'true' ]; then
-        echo "==============================================================================="
-        echo "Without repository: $repository. SKIPPING!"
-        echo "==============================================================================="
-    elif [ "${repository}" != "${repository#uberfire}" ] && [ "$withoutUberfire" = 'true' ]; then
-        echo "==============================================================================="
-        echo "Without repository: $repository. SKIPPING!"
-        echo "==============================================================================="
     else
         echo "==============================================================================="
         echo "Repository: $repository"
         echo "==============================================================================="
-
         echo -- prefix ${gitUrlPrefix} --
         echo -- repository ${repository} --
         echo -- ${gitUrlPrefix}${repository}.git -- ${repository} --
-        git clone ${gitUrlPrefix}${repository}.git ${repository}
-        
+        if [ "x${additionalGitOptions}" != "x" ]; then
+            echo -- additional Git options: ${additionalGitOptions} --
+        fi
+        git clone ${additionalGitOptions} ${gitUrlPrefix}${repository}.git ${repository}
+
         returnCode=$?
         if [ $returnCode != 0 ] ; then
             exit $returnCode

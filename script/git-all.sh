@@ -22,12 +22,6 @@ initializeWorkingDirAndScriptDir() {
 initializeWorkingDirAndScriptDir
 droolsjbpmOrganizationDir="$scriptDir/../.."
 
-# these variables don't make any sense right now
-#
-#withoutJbpm="$withoutJbpm"
-#withoutUberfire="$withoutUberfire"
-
-
 if [ $# = 0 ] ; then
     echo
     echo "Usage:"
@@ -50,22 +44,6 @@ for repository in `cat "${scriptDir}/repository-list.txt"` ; do
         echo "==============================================================================="
         echo "Missing Repository: $repository. SKIPPING!"
         echo "==============================================================================="
-    elif [ "${repository}" != "${repository#jbpm}" ] && [ "$withoutJbpm" = 'true' ]; then
-        echo "==============================================================================="
-        echo "Without repository: $repository. SKIPPING!"
-        echo "==============================================================================="
-    elif [ "${repository}" != "${repository#jbpm-console-ng}" ] && [ "$withoutJbpm" = 'true' ]; then
-        echo "==============================================================================="
-        echo "Without repository: $repository. SKIPPING!"
-        echo "==============================================================================="
-
-    # since uberfire is not build anymore this can be taken out
-    #
-    #elif [ "${repository}" != "${repository#uberfire}" ] && [ "$withoutUberfire" = 'true' ]; then
-    #    echo "==============================================================================="
-    #    echo "Without repository: $repository. SKIPPING!"
-    #    echo "==============================================================================="
-
     else
         echo "==============================================================================="
         echo "Repository: $repository"

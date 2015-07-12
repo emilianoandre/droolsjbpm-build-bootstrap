@@ -273,12 +273,20 @@
         <version>${version.org.drools}</version>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId><!-- Does this belong in the kie-bom or in the drools-bom ? -->
+        <groupId>org.drools</groupId>
+        <artifactId>multiple-kbases</artifactId>
+        <version>${version.org.drools}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.kie</groupId>
+        <!-- Does this belong in the kie-bom or in the drools-bom ? -->
         <artifactId>kie-ci</artifactId>
         <version>${version.org.drools}</version>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId><!-- Does this belong in the kie-bom or in the drools-bom ? -->
+        <groupId>org.kie</groupId>
+        <!-- Does this belong in the kie-bom or in the drools-bom ? -->
         <artifactId>kie-ci-osgi</artifactId>
         <version>${version.org.drools}</version>
       </dependency>
@@ -314,8 +322,8 @@
       <dependency>
         <groupId>org.drools</groupId>
         <artifactId>drools-docs</artifactId>
-        <type>jdocbook</type>
         <version>${version.org.drools}</version>
+        <type>jdocbook</type>
       </dependency>
       <dependency>
         <groupId>org.drools</groupId>
@@ -328,18 +336,6 @@
       <!-- droolsjbpm-integration -->
       <dependency>
         <groupId>org.drools</groupId>
-        <artifactId>drools-camel-server-example</artifactId>
-        <type>war</type>
-        <version>${version.org.drools.droolsjbpm-integration}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.drools</groupId>
-        <artifactId>drools-camel-server-example</artifactId>
-        <version>${version.org.drools.droolsjbpm-integration}</version>
-        <classifier>sources</classifier>
-      </dependency>
-      <dependency>
-        <groupId>org.drools</groupId>
         <artifactId>drools-simulator</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
       </dependency>
@@ -376,19 +372,32 @@
         <artifactId>drools-karaf-features</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
       </dependency>
-	  <dependency>
+      <dependency>
         <groupId>org.drools</groupId>
         <artifactId>drools-karaf-features</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
         <classifier>features</classifier>
         <type>xml</type>
       </dependency>
-	  <dependency>
+      <dependency>
         <groupId>org.drools</groupId>
-        <artifactId>drools-karaf-itest</artifactId>
+        <artifactId>drools-karaf-itests</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
       </dependency>
-	  <dependency>
+
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-android</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-android</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+        <classifier>sources</classifier>
+      </dependency>
+
+      <dependency>
         <groupId>org.drools</groupId>
         <artifactId>drools-rhq-plugin</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
@@ -871,47 +880,71 @@
         <classifier>sources</classifier>
       </dependency>
       <!--REST-->
-      <dependency>
-        <groupId>org.drools</groupId>
-        <artifactId>drools-wb-rest-defaultapprover</artifactId>
-        <version>${version.org.guvnor}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>org.drools</groupId>
-        <artifactId>drools-wb-rest-defaultapprover</artifactId>
-        <version>${version.org.guvnor}</version>
-        <classifier>sources</classifier>
-      </dependency>
-      <dependency>
-        <groupId>org.drools</groupId>
-        <artifactId>drools-wb-rest</artifactId>
-        <version>${version.org.guvnor}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.drools</groupId>
-        <artifactId>drools-wb-rest</artifactId>
-        <version>${version.org.guvnor}</version>
-        <classifier>sources</classifier>
-      </dependency>
 
-      <!--Data migration-->
+      <!--jcr2vfs data migration-->
       <dependency>
         <groupId>org.drools</groupId>
-        <artifactId>drools-wb-jcr2vfs-migration-core</artifactId>
+        <artifactId>drools-wb-jcr2vfs-migration-common</artifactId>
         <version>${version.org.guvnor}</version>
       </dependency>
       <dependency>
         <groupId>org.drools</groupId>
-        <artifactId>drools-wb-jcr2vfs-migration-core</artifactId>
+        <artifactId>drools-wb-jcr2vfs-migration-common</artifactId>
+        <version>${version.org.guvnor}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-wb-jcr2vfs-migration-xml</artifactId>
+        <version>${version.org.guvnor}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-wb-jcr2vfs-migration-xml</artifactId>
+        <version>${version.org.guvnor}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-wb-jcr2vfs-export</artifactId>
+        <version>${version.org.guvnor}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-wb-jcr2vfs-export</artifactId>
+        <version>${version.org.guvnor}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-wb-jcr2vfs-export</artifactId>
         <version>${version.org.guvnor}</version>
         <type>zip</type>
+        <classifier>with-deps</classifier>
       </dependency>
       <dependency>
         <groupId>org.drools</groupId>
-        <artifactId>drools-wb-jcr2vfs-migration-core</artifactId>
+        <artifactId>drools-wb-jcr2vfs-import</artifactId>
+        <version>${version.org.guvnor}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-wb-jcr2vfs-import</artifactId>
         <version>${version.org.guvnor}</version>
         <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-wb-jcr2vfs-import</artifactId>
+        <version>${version.org.guvnor}</version>
+        <type>zip</type>
+        <classifier>with-deps</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-wb-jcr2vfs-distribution</artifactId>
+        <version>${version.org.guvnor}</version>
+        <type>zip</type>
       </dependency>
 
       <!--drools-wb distribution-->

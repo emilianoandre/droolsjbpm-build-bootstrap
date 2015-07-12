@@ -1,6 +1,17 @@
 #!/usr/bin/perl
 
+#
+# A "Split Package" is a package that is present in multiple modules (jars). 
+#
+# This script: 
+# 1. identifies packages that are split over multiple jars. 
+# 2. identifies Class names that are used in multiple modules
+#
+# Both things are a problem when using OSGi!
+#
+
 use strict;
+use warnings;
 use File::Find;
 
 if( ! $ARGV[0] ) { 
@@ -41,7 +52,7 @@ sub wanted {
   }
 
   my $inMainOrTest = 0;
-  foreach my $dir ("main", "test") {\ 
+  foreach my $dir ("main", "test") {
     my ($packagesRef, $splitPackagesRef);
     $packagesRef = $patternMapsMap{$dir}[0];
     $splitPackagesRef = $patternMapsMap{$dir}[1];

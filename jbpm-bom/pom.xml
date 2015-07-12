@@ -83,6 +83,17 @@
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-query-jpa</artifactId>
+        <version>${version.org.jbpm}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-query-jpa</artifactId>
+        <version>${version.org.jbpm}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
         <artifactId>jbpm-audit</artifactId>
         <version>${version.org.jbpm}</version>
       </dependency>
@@ -177,6 +188,49 @@
         <artifactId>jbpm-executor</artifactId>
         <version>${version.org.jbpm}</version>
         <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-executor</artifactId>
+        <version>${version.org.jbpm}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-executor-cdi</artifactId>
+        <version>${version.org.jbpm}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-executor-cdi</artifactId>
+        <version>${version.org.jbpm}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-executor-cdi</artifactId>
+        <version>${version.org.jbpm}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-executor-ejb</artifactId>
+        <version>${version.org.jbpm}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-executor-ejb</artifactId>
+        <version>${version.org.jbpm}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-executor-ejb</artifactId>
+        <version>${version.org.jbpm}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
@@ -246,7 +300,7 @@
         <version>${version.org.jbpm}</version>
         <type>test-jar</type>
         <scope>test</scope>
-      </dependency>  
+      </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-examples</artifactId>
@@ -261,8 +315,14 @@
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-docs</artifactId>
-        <type>jdocbook</type>
         <version>${version.org.jbpm}</version>
+        <type>jdocbook</type>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-docs</artifactId>
+        <version>${version.org.jbpm}</version>
+        <classifier>sources</classifier>
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
@@ -275,6 +335,7 @@
         <version>${version.org.jbpm}</version>
         <classifier>sources</classifier>
       </dependency>
+
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-services-api</artifactId>
@@ -292,7 +353,7 @@
         <version>${version.org.jbpm}</version>
         <type>test-jar</type>
         <scope>test</scope>
-      </dependency> 
+      </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-services-cdi</artifactId>
@@ -366,6 +427,24 @@
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-services-ejb-timer</artifactId>
+        <version>${version.org.jbpm}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-services-ejb-timer</artifactId>
+        <version>${version.org.jbpm}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-services-ejb-timer</artifactId>
+        <version>${version.org.jbpm}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
+      </dependency>
 
       <!-- jbpm-designer -->
       <dependency>
@@ -395,13 +474,6 @@
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-designer-distribution-wars</artifactId>
         <version>${version.org.jbpm.jbpm-designer}</version>
-        <classifier>jboss-as7</classifier>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-designer-distribution-wars</artifactId>
-        <version>${version.org.jbpm.jbpm-designer}</version>
         <classifier>tomcat7</classifier>
         <type>war</type>
       </dependency>
@@ -414,17 +486,6 @@
       </dependency>
 
       <!-- jbpm-form-modeler -->
-      <dependency>
-        <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-form-modeler-app</artifactId>
-        <version>${version.org.jbpm.jbpm-form-modeler}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-form-modeler-renderer</artifactId>
-        <version>${version.org.jbpm.jbpm-form-modeler}</version>
-      </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-form-modeler-renderer-api</artifactId>
@@ -484,14 +545,6 @@
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-form-modeler-request-dispatcher</artifactId>
         <version>${version.org.jbpm.jbpm-form-modeler}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-form-modeler-request-dispatcher</artifactId>
-        <version>${version.org.jbpm.jbpm-form-modeler}</version>
-        <type>jar</type>
-        <classifier>classes</classifier>
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
@@ -502,33 +555,16 @@
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-form-modeler-ui</artifactId>
         <version>${version.org.jbpm.jbpm-form-modeler}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-form-modeler-ui</artifactId>
-        <version>${version.org.jbpm.jbpm-form-modeler}</version>
-        <type>jar</type>
-        <classifier>classes</classifier>
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-form-modeler-form-editor</artifactId>
         <version>${version.org.jbpm.jbpm-form-modeler}</version>
-        <type>war</type>
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-form-modeler-static-resources</artifactId>
         <version>${version.org.jbpm.jbpm-form-modeler}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-form-modeler-static-resources</artifactId>
-        <version>${version.org.jbpm.jbpm-form-modeler}</version>
-        <type>jar</type>
-        <classifier>classes</classifier>
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
@@ -565,13 +601,18 @@
       </dependency>
       <dependency>
          <groupId>org.jbpm</groupId>
-         <artifactId>jbpm-console-ng-asset-mgmt-api</artifactId>
+         <artifactId>jbpm-console-ng-data-filters-client</artifactId>
          <version>${version.org.jbpm.jbpm-console-ng}</version>
       </dependency>
       <dependency>
-        <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-console-ng-asset-mgmt-client</artifactId>
-        <version>${version.org.jbpm.jbpm-console-ng}</version>
+         <groupId>org.jbpm</groupId>
+         <artifactId>jbpm-console-ng-generic-forms-client</artifactId>
+         <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.jbpm</groupId>
+         <artifactId>jbpm-console-ng-generic-forms-api</artifactId>
+         <version>${version.org.jbpm.jbpm-console-ng}</version>
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
@@ -593,6 +634,7 @@
         <artifactId>jbpm-console-ng-human-tasks-backend</artifactId>
         <version>${version.org.jbpm.jbpm-console-ng}</version>
       </dependency>
+
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-console-ng-human-tasks-admin-api</artifactId>
@@ -608,6 +650,21 @@
         <artifactId>jbpm-console-ng-human-tasks-admin-backend</artifactId>
         <version>${version.org.jbpm.jbpm-console-ng}</version>
       </dependency>
+           <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-process-runtime-admin-api</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-process-runtime-admin-client</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-process-runtime-admin-backend</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-console-ng-human-tasks-forms-api</artifactId>
@@ -621,6 +678,21 @@
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-console-ng-human-tasks-forms-backend</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-process-runtime-forms-api</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-process-runtime-forms-client</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-process-runtime-forms-backend</artifactId>
         <version>${version.org.jbpm.jbpm-console-ng}</version>
       </dependency>
       <dependency>
@@ -721,8 +793,14 @@
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-console-ng-module-archetype</artifactId>
+        <artifactId>jbpm-console-ng-rest</artifactId>
         <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-rest</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+        <classifier>sources</classifier>
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
@@ -732,13 +810,6 @@
       </dependency>
 
       <!-- jbpm-console-ng wars -->
-      <dependency>
-        <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-console-ng-distribution-wars</artifactId>
-        <version>${version.org.jbpm.jbpm-console-ng}</version>
-        <classifier>jboss-as7</classifier>
-        <type>war</type>
-      </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-console-ng-distribution-wars</artifactId>
@@ -763,7 +834,26 @@
       <dependency>
         <groupId>org.drools</groupId><!-- TODO this groupId doesn't seem right -->
         <artifactId>jbpm-simulation</artifactId>
-        <version>${version.org.drools}</version>
+        <version>${version.org.jbpm}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.drools</groupId><!-- TODO this groupId doesn't seem right -->
+        <artifactId>jbpm-simulation</artifactId>
+        <version>${version.org.jbpm}</version>
+        <classifier>sources</classifier>
+      </dependency>
+
+      <!-- jbpm-process-svg -->
+      <dependency>
+        <groupId>org.kie</groupId>
+        <artifactId>jbpm-process-svg</artifactId>
+        <version>${version.org.jbpm}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie</groupId>
+        <artifactId>jbpm-process-svg</artifactId>
+        <version>${version.org.jbpm}</version>
+        <classifier>sources</classifier>
       </dependency>
 
       <!-- droolsjbpm-tools -->

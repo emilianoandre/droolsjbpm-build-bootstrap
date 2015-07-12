@@ -79,7 +79,7 @@
 
       <dependency>
         <groupId>org.kie</groupId>
-        <artifactId>kie-server-social-home-page</artifactId>
+        <artifactId>kie-identity-session-provider</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
       </dependency>
 
@@ -159,66 +159,137 @@
 
       <!-- KIE Server -->
       <dependency>
-        <groupId>org.kie</groupId>
+        <groupId>org.kie.server</groupId>
         <artifactId>kie-server-api</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId>
+        <groupId>org.kie.server</groupId>
         <artifactId>kie-server-api</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
         <classifier>sources</classifier>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId>
+        <groupId>org.kie.server</groupId>
         <artifactId>kie-server-client</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId>
+        <groupId>org.kie.server</groupId>
         <artifactId>kie-server-client</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
         <classifier>sources</classifier>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-server-services</artifactId>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-services-common</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-server-services</artifactId>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-services-common</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-services-drools</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-services-drools</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-services-jbpm</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-services-jbpm</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-jms</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-jms</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-rest-common</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-rest-common</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-rest-drools</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-rest-drools</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-rest-jbpm</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-rest-jbpm</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-ws</artifactId>
+        <version>${version.org.drools.droolsjbpm-integration}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-ws</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
         <classifier>sources</classifier>
       </dependency>
       <dependency>
         <groupId>org.kie</groupId>
-        <artifactId>kie-server-distribution-wars</artifactId>
+        <artifactId>kie-server</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
         <classifier>ee6</classifier>
         <type>war</type>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-server-distribution-wars</artifactId>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
         <classifier>ee7</classifier>
         <type>war</type>
       </dependency>
       <dependency>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-server-distribution-wars</artifactId>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
         <classifier>webc</classifier>
         <type>war</type>
       </dependency>
-      <dependency>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-swagger-ui</artifactId>
-        <version>${version.org.drools.droolsjbpm-integration}</version>
-        <type>war</type>
-      </dependency>
-      
+
       <!-- KIE Remote WS -->
       <dependency>
         <groupId>org.kie.remote.ws</groupId>
@@ -274,17 +345,6 @@
       <dependency>
         <groupId>org.kie</groupId>
         <artifactId>kie-spring</artifactId>
-        <version>${version.org.drools.droolsjbpm-integration}</version>
-        <classifier>sources</classifier>
-      </dependency>
-      <dependency>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-camel</artifactId>
-        <version>${version.org.drools.droolsjbpm-integration}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-camel</artifactId>
         <version>${version.org.drools.droolsjbpm-integration}</version>
         <classifier>sources</classifier>
       </dependency>
@@ -365,6 +425,12 @@
       <dependency>
         <groupId>org.kie.workbench.services</groupId>
         <artifactId>kie-wb-common-data-modeller-core</artifactId>
+        <version>${version.org.guvnor}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.kie.workbench.services</groupId>
+        <artifactId>kie-wb-common-data-modeller-core</artifactId>
+        <classifier>tests</classifier>
         <version>${version.org.guvnor}</version>
       </dependency>
 
@@ -521,7 +587,7 @@
         <version>${version.org.guvnor}</version>
       </dependency>
       <dependency>
-        <groupId>org.kie.workbenchs.screens</groupId>
+        <groupId>org.kie.workbench.screens</groupId>
         <artifactId>kie-wb-common-default-editor-backend</artifactId>
         <version>${version.org.guvnor}</version>
         <classifier>sources</classifier>
@@ -878,20 +944,19 @@
         <classifier>sources</classifier>
       </dependency>
 
-
       <!-- kie-drools-wb distribution wars -->
       <dependency>
         <groupId>org.kie</groupId>
         <artifactId>kie-drools-wb-distribution-wars</artifactId>
         <version>${version.org.guvnor}</version>
-        <classifier>eap6_3</classifier>
+        <classifier>wildfly8</classifier>
         <type>war</type>
       </dependency>
       <dependency>
         <groupId>org.kie</groupId>
         <artifactId>kie-drools-wb-distribution-wars</artifactId>
         <version>${version.org.guvnor}</version>
-        <classifier>jboss-as7</classifier>
+        <classifier>eap6_4</classifier>
         <type>war</type>
       </dependency>
       <dependency>
@@ -912,7 +977,7 @@
         <groupId>org.kie</groupId>
         <artifactId>kie-drools-wb-distribution-wars</artifactId>
         <version>${version.org.guvnor}</version>
-        <classifier>wildfly8</classifier>
+        <classifier>weblogic12</classifier>
         <type>war</type>
       </dependency>
 
@@ -921,14 +986,14 @@
         <groupId>org.kie</groupId>
         <artifactId>kie-wb-distribution-wars</artifactId>
         <version>${version.org.guvnor}</version>
-        <classifier>eap6_3</classifier>
+        <classifier>wildfly8</classifier>
         <type>war</type>
       </dependency>
       <dependency>
         <groupId>org.kie</groupId>
         <artifactId>kie-wb-distribution-wars</artifactId>
         <version>${version.org.guvnor}</version>
-        <classifier>jboss-as7</classifier>
+        <classifier>eap6_4</classifier>
         <type>war</type>
       </dependency>
       <dependency>
@@ -949,44 +1014,12 @@
         <groupId>org.kie</groupId>
         <artifactId>kie-wb-distribution-wars</artifactId>
         <version>${version.org.guvnor}</version>
-        <classifier>wildfly8</classifier>
+        <classifier>weblogic12</classifier>
         <type>war</type>
       </dependency>
 
-      <!-- kie-tests -->
-      <dependency>
-        <groupId>org.kie.tests.remote</groupId>
-        <artifactId>kie-wb-tests-base</artifactId>
-        <version>${version.org.kie}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.kie.tests.remote</groupId>
-        <artifactId>kie-wb-tests-base</artifactId>
-        <version>${version.org.kie}</version>
-        <classifier>sources</classifier>
-      </dependency>
-      <dependency>
-        <groupId>org.kie.tests.remote</groupId>
-        <artifactId>drools-wb-tests-base</artifactId>
-        <version>${version.org.kie}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.kie.tests.remote</groupId>
-        <artifactId>drools-wb-tests-base</artifactId>
-        <version>${version.org.kie}</version>
-        <classifier>sources</classifier>
-      </dependency>
-      <dependency>
-        <groupId>org.kie.tests.remote</groupId>
-        <artifactId>jbpm-console-tests-base</artifactId>
-        <version>${version.org.kie}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.kie.tests.remote</groupId>
-        <artifactId>jbpm-console-tests-base</artifactId>
-        <version>${version.org.kie}</version>
-        <classifier>sources</classifier>
-      </dependency>
+      <!-- kie-tests-* artifacts were moved directly into the kie-tests repo. They should not be here as they
+           are not part of the release and just pollute the BOM with inaccessible dependencies -->
 
       <!-- kie-smoke-tests -->
       <dependency>
@@ -998,7 +1031,7 @@
         <groupId>org.kie.smoke</groupId>
         <artifactId>kie-wb-smoke-tests</artifactId>
         <version>${version.org.kie}</version>
-        <classifier>sources</classifier>
+        <classifier>test-sources</classifier>
       </dependency>
     </dependencies>
   </dependencyManagement>
