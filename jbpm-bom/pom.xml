@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.kie</groupId>
     <artifactId>kie-parent-metadata</artifactId>
-    <version>6.3.0-SNAPSHOT</version>
+    <version>6.4.0-SNAPSHOT</version>
   </parent>
 
   <groupId>org.jbpm</groupId>
@@ -89,6 +89,12 @@
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-query-jpa</artifactId>
+        <type>test-jar</type>
+        <version>${version.org.jbpm}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-query-jpa</artifactId>
         <version>${version.org.jbpm}</version>
         <classifier>sources</classifier>
       </dependency>
@@ -111,6 +117,17 @@
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-bpmn2</artifactId>
+        <version>${version.org.jbpm}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-case-mgmt</artifactId>
+        <version>${version.org.jbpm}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-case-mgmt</artifactId>
         <version>${version.org.jbpm}</version>
         <classifier>sources</classifier>
       </dependency>

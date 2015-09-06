@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.kie</groupId>
     <artifactId>kie-parent-metadata</artifactId>
-    <version>6.3.0-SNAPSHOT</version>
+    <version>6.4.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>kie-platform-bom</artifactId>
@@ -280,6 +280,14 @@
         <version>${version.com.google.android}</version>
       </dependency>
 
+      <!-- Can be removed once https://github.com/jboss-integration/jboss-integration-platform-bom/pull/213 is merged
+           and next ip-bom released. -->
+      <dependency>
+        <groupId>com.sun.codemodel</groupId>
+        <artifactId>codemodel</artifactId>
+        <version>${version.com.sun.codemodel}</version>
+      </dependency>
+
       <dependency>
         <groupId>de.benediktmeurer.gwt-slf4j</groupId>
         <artifactId>gwt-slf4j</artifactId>
@@ -312,23 +320,6 @@
       </dependency>
 
       <dependency>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-rt-bindings-xml</artifactId>
-        <version>${version.org.apache.cxf}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-rt-ws-addr</artifactId>
-        <version>${version.org.apache.cxf}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>org.apache.helix</groupId>
-        <artifactId>helix-core</artifactId>
-        <version>${version.org.apache.helix}</version>
-      </dependency>
-
-      <dependency>
         <groupId>org.apache.lucene</groupId>
         <artifactId>lucene-core</artifactId>
         <version>${version.org.apache.lucene}</version>
@@ -358,17 +349,13 @@
         <artifactId>lucene-sandbox</artifactId>
         <version>${version.org.apache.lucene}</version>
       </dependency>
+
+
       <!-- dependency of org.apache.lucene:lucene-sandbox -->
       <dependency>
         <groupId>jakarta-regexp</groupId>
         <artifactId>jakarta-regexp</artifactId>
         <version>${version.jakarta-regexp}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>org.apache.ws.xmlschema</groupId>
-        <artifactId>xmlschema-core</artifactId>
-        <version>${version.org.apache.ws.xmlschema}</version>
       </dependency>
 
       <dependency>
@@ -445,12 +432,12 @@
         <artifactId>assertj-core</artifactId>
         <version>${version.org.assertj}</version>
       </dependency>
-
-      <dependency>
-        <groupId>org.eclipse.jgit</groupId>
-        <artifactId>org.eclipse.jgit</artifactId>
-        <version>${version.org.eclipse.jgit}</version>
-      </dependency>
+	
+     <dependency>
+	<groupId>org.eclipse</groupId>
+	<artifactId>org.eclipse.bpmn2</artifactId>
+	<version>${version.org.eclipse.bpmn2}</version>
+     </dependency>
 
       <!-- needed by jbpm-form-modeler -->
       <dependency>
@@ -459,45 +446,11 @@
         <version>${version.org.eclipse.jdt.core.compiler}</version>
       </dependency>
 
+      <!-- needed by jbpm -->
       <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-continuation</artifactId>
-        <version>${version.org.eclipse.jetty}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-http</artifactId>
-        <version>${version.org.eclipse.jetty}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-io</artifactId>
-        <version>${version.org.eclipse.jetty}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-security</artifactId>
-        <version>${version.org.eclipse.jetty}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-server</artifactId>
-        <version>${version.org.eclipse.jetty}</version>
-      </dependency>
-      <dependency><!-- This must be placed above com.google.gwt:gwt-dev to override the Jetty that is present there -->
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-servlet</artifactId>
-        <version>${version.org.eclipse.jetty}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-servlets</artifactId>
-        <version>${version.org.eclipse.jetty}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-util</artifactId>
-        <version>${version.org.eclipse.jetty}</version>
+        <groupId>org.jgroups</groupId>
+        <artifactId>jgroups</artifactId>
+        <version>${version.org.jgroups}</version>
       </dependency>
 
       <!-- Jolokia  -->
@@ -531,12 +484,6 @@
         <groupId>org.owasp.encoder</groupId>
         <artifactId>encoder</artifactId>
         <version>${version.org.owasp.encoder}</version>
-      </dependency>
-
-      <dependency><!-- Not part of the KIE release lifecycle, so it counts as an external dependency -->
-        <groupId>org.jbpm.jbpm5</groupId>
-        <artifactId>jbpmmigration</artifactId>
-        <version>${version.org.jbpm.jbpm5.jbpmmigration}</version>
       </dependency>
 
       <!-- Errai (needed for Guice exclusion) -->
@@ -653,13 +600,11 @@
         <artifactId>jetty</artifactId>
         <version>${version.org.mortbay.jetty}</version>
       </dependency>
-
       <dependency>
         <groupId>com.google.gwt</groupId>
         <artifactId>gwt-dev</artifactId>
         <version>${version.com.google.gwt}</version>
       </dependency>
-
       <dependency>
         <groupId>com.google.gwt</groupId>
         <artifactId>gwt-user</artifactId>
@@ -690,12 +635,6 @@
       </dependency>
 
       <dependency>
-        <groupId>org.reflections</groupId>
-        <artifactId>reflections</artifactId>
-        <version>0.9.9-RC1</version>
-      </dependency>
-
-      <dependency>
         <groupId>org.roboguice</groupId>
         <artifactId>roboguice</artifactId>
         <version>${version.org.roboguice}</version>
@@ -722,56 +661,10 @@
         <version>${version.org.slf4j}</version>
       </dependency>
 
-      <!-- kie-ci -->
       <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-artifact</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-core</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-model</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-model-builder</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-plugin-api</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-repository-metadata</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-compat</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-aether-provider</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-settings</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-settings-builder</artifactId>
-        <version>${version.org.apache.maven}</version>
+        <groupId>org.springframework.osgi</groupId>
+        <artifactId>spring-osgi-core</artifactId>
+        <version>${version.org.springframework.osgi}</version>
       </dependency>
 
       <dependency>
@@ -792,47 +685,6 @@
         <groupId>org.codehaus.plexus</groupId>
         <artifactId>plexus-interpolation</artifactId>
         <version>${version.org.codehaus.plexus.plexus-interpolation}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>org.eclipse.aether</groupId>
-        <artifactId>aether-api</artifactId>
-        <version>${version.org.eclipse.aether}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.aether</groupId>
-        <artifactId>aether-spi</artifactId>
-        <version>${version.org.eclipse.aether}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.aether</groupId>
-        <artifactId>aether-util</artifactId>
-        <version>${version.org.eclipse.aether}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.aether</groupId>
-        <artifactId>aether-impl</artifactId>
-        <version>${version.org.eclipse.aether}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.aether</groupId>
-        <artifactId>aether-transport-file</artifactId>
-        <version>${version.org.eclipse.aether}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.aether</groupId>
-        <artifactId>aether-transport-http</artifactId>
-        <version>${version.org.eclipse.aether}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.aether</groupId>
-        <artifactId>aether-transport-wagon</artifactId>
-        <version>${version.org.eclipse.aether}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.aether</groupId>
-        <artifactId>aether-connector-basic</artifactId>
-        <version>${version.org.eclipse.aether}</version>
       </dependency>
 
       <!-- jboss as and arquillian deps (JBPM-4403) -->
@@ -888,41 +740,6 @@
         </exclusions>
       </dependency>
 
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-container-karaf</artifactId>
-        <version>${version.org.ops4j.pax.exam}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam</artifactId>
-        <version>${version.org.ops4j.pax.exam}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-extender-service</artifactId>
-        <version>${version.org.ops4j.pax.exam}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-spi</artifactId>
-        <version>${version.org.ops4j.pax.exam}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-junit4</artifactId>
-        <version>${version.org.ops4j.pax.exam}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-inject</artifactId>
-        <version>${version.org.ops4j.pax.exam}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-invoker-junit</artifactId>
-        <version>${version.org.ops4j.pax.exam}</version>
-      </dependency>
       <dependency>
         <groupId>org.apache.geronimo.specs</groupId>
         <artifactId>geronimo-atinject_1.0_spec</artifactId>
@@ -984,23 +801,6 @@
         </exclusions>
       </dependency>
 
-      <!-- test dependencies, used in kie-server-services among other places -->
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>tjws</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-test-tjws</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-embedder</artifactId>
-        <version>${version.org.apache.maven}</version>
-      </dependency>
-
       <!-- Lienzo -->
       <dependency>
         <groupId>com.ahome-it</groupId>
@@ -1016,99 +816,36 @@
 
       <dependency>
         <groupId>org.jboss.byteman</groupId>
-        <artifactId>byteman-bmunit</artifactId>
+        <artifactId>byteman</artifactId>
+        <scope>test</scope>
         <version>${version.org.jboss.byteman}</version>
       </dependency>
-
       <dependency>
-        <groupId>org.simpleframework</groupId>
-        <artifactId>simple-http</artifactId>
-        <version>${version.org.simpleframework}</version>
+          <groupId>org.jboss.byteman</groupId>
+          <artifactId>byteman-submit</artifactId>
+          <scope>test</scope>
+          <version>${version.org.jboss.byteman}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.jboss.byteman</groupId>
+          <artifactId>byteman-install</artifactId>
+          <scope>test</scope>
+          <version>${version.org.jboss.byteman}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.jboss.byteman</groupId>
+          <artifactId>byteman-bmunit</artifactId>
+          <scope>test</scope>
+          <version>${version.org.jboss.byteman}</version>
+          <exclusions>
+              <exclusion>
+                  <groupId>org.testng</groupId>
+                  <artifactId>testng</artifactId>
+              </exclusion>
+          </exclusions>
       </dependency>
 
-      <!-- when upgraded resteasy version in jboss-ip-bom to 2.3.10.Final this can be removed -->
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>abdera-atom-provider</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>async-http-jbossweb</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>async-http-servlet-3.0</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>async-http-tomcat6</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>jaxrs-api</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-atom-provider</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-cache-core</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-guice</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-jaxb-provider</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-jettison-provider</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-jackson-provider</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-fastinfoset-provider</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-jaxrs</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-multipart-provider</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-spring</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-yaml-provider</artifactId>
-        <version>${version.org.jboss.resteasy}</version>
-      </dependency>
-
-      <!-- if upgraded jboss.xnio version in jboss-ip-bom to 3.2.0.Final this can be removed -->
+      <!-- WildFly -->
       <dependency>
         <groupId>org.jboss.xnio</groupId>
         <artifactId>xnio-api</artifactId>
@@ -1120,11 +857,30 @@
         <version>${version.org.jboss.xnio}</version>
       </dependency>
 
+      <dependency>
+        <groupId>org.simpleframework</groupId>
+        <artifactId>simple-http</artifactId>
+        <version>${version.org.simpleframework}</version>
+      </dependency>
+
       <!-- if upgraded allen-sauer.gwt.dnd version in jboss-ip-bom to 3.3.3 this can be removed -->
       <dependency>
         <groupId>com.allen-sauer.gwt.dnd</groupId>
         <artifactId>gwt-dnd</artifactId>
         <version>${version.com.allen-sauer.gwt.dnd}</version>
+      </dependency>
+
+      <!-- temporary, should be moved to jboss-ip-bom -->
+      <dependency>
+        <groupId>org.gwtbootstrap3</groupId>
+        <artifactId>gwtbootstrap3</artifactId>
+        <version>${version.org.gwtbootstrap3}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.gwtbootstrap3</groupId>
+        <artifactId>gwtbootstrap3-extras</artifactId>
+        <version>${version.org.gwtbootstrap3}</version>
       </dependency>
 
       <!-- selenium dependencies -->
@@ -1133,36 +889,17 @@
         <artifactId>selenium-java</artifactId>
         <version>${version.org.seleniumhq.selenium}</version>
       </dependency>
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-exec</artifactId>
-        <version>${version.org.apache.commons.commons-exec}</version>
-      </dependency>
+
       <dependency>
         <groupId>com.github.detro</groupId>
         <artifactId>phantomjsdriver</artifactId>
         <version>${version.com.github.detro}</version>
       </dependency>
 
-      <!-- this override should be removed when pull request on integration platform bom is performed -->
       <dependency>
-        <groupId>org.jboss.forge.roaster</groupId>
-        <artifactId>roaster-api</artifactId>
-        <version>2.13.0.Final</version>
-      </dependency>
-
-      <dependency>
-        <groupId>org.jboss.forge.roaster</groupId>
-        <artifactId>roaster-jdt</artifactId>
-        <version>2.13.0.Final</version>
-      </dependency>
-
-      <!-- Remove hibermate-jpamodelgen 
-           when we move to jboss-integration-platform-bom 6.0.0.CR27+ -->
-      <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-jpamodelgen</artifactId>
-        <version>${version.org.hibernate.jpamodelgen}</version>
+        <groupId>org.mvel</groupId>
+        <artifactId>mvel2</artifactId>
+        <version>${version.org.mvel}</version>
       </dependency>
     </dependencies>
 
