@@ -650,7 +650,22 @@
         <artifactId>jbpm-console-ng-human-tasks-admin-backend</artifactId>
         <version>${version.org.jbpm.jbpm-console-ng}</version>
       </dependency>
-           <dependency>
+            <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-issue-tracker-client</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-issue-tracker-backend</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-console-ng-issue-tracker-api</artifactId>
+        <version>${version.org.jbpm.jbpm-console-ng}</version>
+      </dependency>
+      <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-console-ng-process-runtime-admin-api</artifactId>
         <version>${version.org.jbpm.jbpm-console-ng}</version>
